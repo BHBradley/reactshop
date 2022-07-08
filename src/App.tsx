@@ -4,13 +4,14 @@ import React from 'react';
 // Lets add our custom components: 
 import Products from './components/Products'
 import Cart from './components/Cart'
+import CartIcon from './components/CartIcon'
 
 // Call the products data 
 import { products } from './constants/index'
 
-
 //Import the react useState
 import { useState } from 'react';
+
 
 
 const App = () => {
@@ -114,6 +115,9 @@ const App = () => {
   return (
     <div className="lg:flex">
 
+      {/* Display a nice cart icon + amount of itms in the cart dynamically  */}
+      <CartIcon cart={cart}></CartIcon>
+
       {/* HERO  */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center min-h-screen bg-emerald-700 p-4">
 
@@ -134,7 +138,7 @@ const App = () => {
           </div>
 
           <div className="w-full">
-            <h2 className="text-3xl font-light my-2">Your Cart</h2>
+            <h2 id="cart" className="text-3xl font-light my-2">Your Cart</h2>
             <Cart add={add} remove={remove} cart={cart}></Cart>
           </div>
 

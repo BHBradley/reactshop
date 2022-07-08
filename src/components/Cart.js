@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Cart(props) {
-    const {cart,add} = props;
+    const {cart,add,remove} = props;
     return ( 
         <>
 
@@ -20,7 +20,8 @@ export default function Cart(props) {
                                 <p>Quantity: <span>{product.quantity}</span></p>
                             </div>
                             <div>
-                                <button onClick={() => add(product)} className="p-4 bg-black text-white rounded-full py-1 font-bold text-md">Add</button>
+                            <button onClick={() => add(product)} className="p-4 bg-black text-white rounded-full py-1 font-bold text-md">Add</button>
+                            <button onClick={() => remove(product)} className="p-4 bg-black text-white rounded-full py-1 font-bold text-md">remove</button>
                             </div>
                         </div>
                     )

@@ -12,7 +12,8 @@ import { products } from './constants/index'
 //Import the react useState
 import { useState } from 'react';
 
-
+// Import a nice background image I had in mind, for the hero
+import Background from './background.jpg'
 
 const App = () => {
 
@@ -112,20 +113,29 @@ const App = () => {
 
   }
 
+  // Background style: 
+  const heroBgImgStyle = {
+    backgroundImage : "url("+Background+")"
+  };
+
+
   return (
+
     <div className="lg:flex">
 
       {/* Display a nice cart icon + amount of itms in the cart dynamically  */}
       <CartIcon cart={cart}></CartIcon>
 
       {/* HERO  */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center min-h-screen bg-emerald-700 p-4">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center min-h-screen bg-emerald-700 p-4 bg-no-repeat bg-cover bg-fixed bg-center" style={heroBgImgStyle}>
 
-          <h1 className="text-white flex flex-col text-center">
-            <span className="text-5xl font-light">Brandon's</span>
-            <span className="text-4xl font-bold">Adventure</span>
-            <span className="text-3xl font-light">Store</span>
-          </h1>
+          <div>
+            <h1 className="text-white flex flex-col text-center">
+              <span className="text-5xl font-light">Brandon's</span>
+              <span className="text-4xl font-bold">Adventure</span>
+              <span className="text-3xl font-light">Store</span>
+            </h1>
+          </div>
 
       </div>
 
@@ -145,6 +155,7 @@ const App = () => {
       </div>
 
     </div>
+
   );
 };
 

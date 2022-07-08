@@ -32,16 +32,17 @@ export default function Cart(props) {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
                 {
+
                     cart.map( 
                         (product) => ( 
-                            <div  key={product.id} className="w-full border rounded bg-gray-50 flex flex-col space-y-2 p-4">
+                            <div  key={product.id} className="w-full border rounded bg-gray-200  flex flex-col space-y-2 p-4">
                                 <div>
                                     <h5 className="font-bold text-md uppercase">{product.name}</h5>
                                     <p className="text-xs">Price: $<span>{product.price.toFixed(2)}</span></p>
                                 </div>
                                 <div className="flex justify-start items-center space-x-1">
                                     <button onClick={() => add(product)} className="p-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center font-bold text-md">+</button>
-                                    <span className="font-semibold bg-gray-100 rounded border flex items-center justify-center w-12 text-xs h-6">{product.quantity}</span>
+                                    <span className="font-semibold bg-gray-50 rounded border flex items-center justify-center w-12 text-xs h-6">{product.quantity}</span>
                                     <button onClick={() => remove(product)} className="p-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center font-bold text-md">-</button>
                                 </div>
                                 <p className="text-xs flex flex-col">
@@ -51,7 +52,9 @@ export default function Cart(props) {
                             </div>
                         )
                     )
+
                 }
+
             </div>
 
         </>

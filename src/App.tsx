@@ -118,6 +118,13 @@ const App = () => {
     backgroundImage : "url("+Background+")"
   };
 
+    // Mobile scroll to when clicking on the view products.
+  const goToProducts = () => {
+
+    const section = document.getElementById('products');
+    if (section) section.scrollIntoView( { behavior : "smooth", block : "start" } )
+
+  }
 
   return (
 
@@ -127,23 +134,29 @@ const App = () => {
       <CartIcon cart={cart}></CartIcon>
 
       {/* HERO  */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center min-h-screen bg-emerald-700 p-4 bg-no-repeat bg-cover bg-fixed bg-center" style={heroBgImgStyle}>
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:justify-start lg:items-end min-h-screen bg-emerald-700 p-4 bg-no-repeat bg-cover bg-fixed bg-center" style={heroBgImgStyle}>
 
           <div>
-            <h1 className="text-white flex flex-col text-center">
-              <span className="text-5xl font-light">Brandon's</span>
-              <span className="text-4xl font-bold">Adventure</span>
-              <span className="text-3xl font-light">Store</span>
+
+            <h1 className="text-white flex flex-col text-center lg:text-right lg:mt-12">
+              <span className="text-6xl lg:text-8xl font-light">Brandon's</span>
+              <span className="text-5xl lg:text-6xl font-bold">Adventure</span>
+              <span className="text-4xl lg:text-4xl font-light">Store</span>
             </h1>
+
+            <div className="block lg:hidden text-center mt-4">
+              <button onClick={goToProducts} className="p-4 bg-emerald-700 text-white rounded-full py-1 font-bold text-md">View products</button>
+            </div>
+
           </div>
 
       </div>
 
       {/* PRODUCTS and CART  */}
-      <div className="w-full lg:w-1/2 min-h-screen p-4 flex flex-col justify-start items-start space-y-2">
+      <div className="w-full lg:w-1/2 min-h-screen p-4 flex flex-col justify-start items-start space-y-2 bg-gray-50">
 
           <div className="w-full">
-            <h2 className="text-3xl font-light my-2">Products</h2>
+            <h2 id="products" className="text-3xl font-light my-2">Products</h2>
             <Products add={add} products={products}></Products>
           </div>
 

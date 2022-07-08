@@ -20,35 +20,39 @@ export default function Cart(props) {
             {
                 cartTotal > 0 && 
                 <div className="flex w-full bg-gray-50 rounded p-4 border my-2 justify-between items-center">
-                    <h2 className="flex flex-col text-xl">
-                        <span>Cart Total</span> 
-                        <span className="font-bold">${cartTotal}</span>
+                    <h2 className="flex flex-col text-md">
+                        <span  className="font-bold">Cart Total</span> 
+                        <span className="font-bold text-emerald-700 text-xl">${cartTotal}</span>
                     </h2>
                     <div>
-                        <button onClick={checkout} className="p-4 bg-emerald-700 text-white rounded-full py-1 font-bold text-md">checkout</button>
+                        <button onClick={checkout} className="p-4 bg-emerald-700 text-white rounded-full py-1 font-bold text-md">Checkout</button>
                     </div>
                 </div>
             }
 
-            {
-
-                cart.map( 
-                    (product) => ( 
-                        <div  key={product.id} className="w-full border rounded bg-gray-50 flex flex-col space-y-2 p-4">
-                            <div>
-                                <h5 className="font-bold text-md uppercase">{product.name}</h5>
-                                <p>Price: $<span>{product.price.toFixed(2)}</span></p>
-                                <p>Quantity: <span>{product.quantity}</span></p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+                {
+                    cart.map( 
+                        (product) => ( 
+                            <div  key={product.id} className="w-full border rounded bg-gray-50 flex flex-col space-y-2 p-4">
+                                <div>
+                                    <h5 className="font-bold text-md uppercase">{product.name}</h5>
+                                    <p className="text-xs">Price: $<span>{product.price.toFixed(2)}</span></p>
+                                </div>
+                                <div className="flex justify-start items-center space-x-1">
+                                    <button onClick={() => add(product)} className="p-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center font-bold text-md">+</button>
+                                    <span className="font-semibold bg-gray-100 rounded border flex items-center justify-center w-12 text-xs h-6">{product.quantity}</span>
+                                    <button onClick={() => remove(product)} className="p-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center font-bold text-md">-</button>
+                                </div>
+                                <p className="text-xs flex flex-col">
+                                    <span><span className="font-semibold">{product.name}</span> <span> total:</span></span> 
+                                    <span className="font-semibold text-emerald-700">{(product.price *product.quantity).toFixed(2)}</span>
+                                </p>
                             </div>
-                            <div>
-                                <button onClick={() => add(product)} className="p-4 bg-black text-white rounded-full py-1 font-bold text-md">Add</button>
-                                <button onClick={() => remove(product)} className="p-4 bg-black text-white rounded-full py-1 font-bold text-md">remove</button>
-                            </div>
-                        </div>
+                        )
                     )
-                )
-
-            }
+                }
+            </div>
 
         </>
     )

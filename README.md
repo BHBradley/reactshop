@@ -1,3 +1,6 @@
+
+![hero](https://github.com/BHBradley/frontend_test/blob/main/public/readme.png?raw=true)
+
 ## Launching Brandon's frontend store
 
 - cd into a new directory on your local

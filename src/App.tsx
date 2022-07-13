@@ -139,9 +139,8 @@ const App = () => {
           <div>
 
             <h1 className="text-white flex flex-col text-center lg:text-right lg:mt-12">
-              <span className="text-6xl lg:text-8xl font-light">Brandon's</span>
-              <span className="text-5xl lg:text-6xl font-bold">Adventure</span>
-              <span className="text-4xl lg:text-4xl font-light">Store</span>
+              <span className="text-6xl lg:text-8xl font-light">Adventure</span>
+              <span className="text-5xl lg:text-6xl font-bold">Store</span>
             </h1>
 
             <div className="block lg:hidden text-center mt-4">

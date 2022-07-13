@@ -6,31 +6,31 @@ export const products = [
   {
     id: 1, 
     quantity : 0,
-    name: 'Sledgehammer',
+    name: 'Sleeping bag',
     price: 125.76
   },
   {
     id: 2, 
     quantity : 0,
-    name: 'Axe',
-    price: 190.51
+    name: 'Tent',
+    price: 390.51
   },
   {
     id: 3, 
     quantity : 0,
-    name: 'Bandsaw',
-    price: 562.14
+    name: 'Trail bag',
+    price: 162.14
   },
   {
     id: 4, 
     quantity : 0,
-    name: 'Chisel',
-    price: 13.9
+    name: 'Hiking boots',
+    price: 213.9
   },
   {
     id: 5, 
     quantity : 0,
-    name: 'Hacksaw',
-    price: 19.45
+    name: 'Fly rod',
+    price: 430.99
   }
 ];

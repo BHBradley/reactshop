@@ -32,5 +32,12 @@ export const products = [
     quantity : 0,
     name: 'Fly rod',
     price: 430.99
+  },
+  {
+    id: 6, 
+    quantity : 0,
+    name: 'Flint',
+    price: 2.50
   }
+  
 ];

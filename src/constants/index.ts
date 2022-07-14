@@ -39,5 +39,4 @@ export const products = [
     name: 'Flint',
     price: 2.50
   }
-  
 ];

@@ -1,7 +1,7 @@
 
 ![hero](https://github.com/BHBradley/frontend_test/blob/main/public/readme.png?raw=true)
 
-## Launching Brandon's frontend store
+## Launching Brandon's react store
 
 ### 1. Create build directory in your Localhost:
 $ ```mkdir shop```

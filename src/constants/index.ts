@@ -7,7 +7,7 @@ export const products = [
     id: 1, 
     quantity : 0,
     name: 'Sleeping bag',
-    price: 125.76
+    price: 125.77
   },
   {
     id: 2, 

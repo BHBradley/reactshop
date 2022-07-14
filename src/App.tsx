@@ -52,7 +52,7 @@ const App = () => {
       // It does not exists! Let us add the product and quantity of 1 to the listing in the cart using setCart()...
       setCart(
 
-        [ ...cart, { ...product, quantity : 1 }]
+        [ ...cart, { ...product, quantity : 1 } ]
 
       )
 
@@ -74,8 +74,6 @@ const App = () => {
       (x : { id: number, quantity: number, name: string, price: number } ) => 
       x.id === product.id 
     )
-
-    console.log(exists)
 
     if (exists) 
     {
